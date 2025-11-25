@@ -1,68 +1,138 @@
-/* RESET (removes default browser spacing) */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BASIC PAGE STYLING */
+/* BODY */
 body {
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  background: #F8F9FD; /* light background */
   padding: 20px;
+  text-align: center; /* center all text */
+   color: #121212;
 }
 
+/* HEADER */
 header {
-  text-align: center;
-  padding: 20px;
-  background: white;
-  margin-bottom: 15px;
+  background: #1A1A2E; /* deep navy */
+  color: white;
+  padding: 25px;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 /* NAVIGATION */
 nav {
-  background: #333;
-  padding: 10px;
-  margin-bottom: 20px;
+  background: #16213E; /* soft dark blue */
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 25px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin-right: 15px;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #E94560;
+}
+
+#about h2 {
+  margin-bottom: 20px; /* spacing below the heading */
+  margin-top: -10px;   /* move heading 10px up */
+}
+
+.profile-img {
+  width: 150px;          
+  height: 150px;
+  border-radius: 50%;     
+  object-fit: cover;      
+  border: 4px solid #0F3460;  
+  margin-bottom: 10px;    
 }
 
 /* SECTIONS */
 section {
   background: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 5px;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.08);
+}
+
+/* PROJECTS LAYOUT */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+/* PROJECT CARD */
+.project {
+  width: 350px;
+  background: #FFFFFF;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+#projects h2 {
+  margin-bottom: 20px; /* spacing below the heading */
+  margin-top: -10px;   /* move heading 10px up */
+}
+
+.project img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  scroll-margin-top: 15px;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
 }
 
 /* FORM */
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
 }
 
 input, textarea {
+  width: 80%;
+  max-width: 400px;
   padding: 10px;
+  border-radius: 5px;
   border: 1px solid #ccc;
 }
 
 button {
-  padding: 10px;
-  background: black;
+  padding: 12px 20px;
+  background: #E94560; /* highlight color */
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #0F3460; /* blue accent */
 }
 
 /* FOOTER */
 footer {
-  text-align: center;
   margin-top: 20px;
   color: #444;
 }
